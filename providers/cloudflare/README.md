@@ -1,4 +1,4 @@
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/YuanBLQ/Qopy-Sync/tree/main/providers/cloudflare)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/YuanBLQ/Qopy-Sync/tree/master/providers/cloudflare)
 
 # Qopy private sync service
 
