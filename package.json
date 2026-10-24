@@ -20,7 +20,7 @@
         "description": "Create or select the private R2 bucket used for encrypted clipboard images."
       },
       "SETUP_TOKEN": {
-        "description": "A long random one-time token. Enter the same value in Qopy during first-time setup."
+        "description": "Paste the one-time setup token copied from Qopy > Settings > Sync > New Deployment."
       }
     }
   }

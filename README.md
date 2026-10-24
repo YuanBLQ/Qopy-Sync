@@ -20,9 +20,9 @@ The Worker never receives the synchronization password or the data-encryption ke
 
 ## Recommended deployment
 
-1. Select **Deploy to Cloudflare** above.
-2. Sign in to Cloudflare and choose a long random value for `SETUP_TOKEN` when prompted.
-3. After deployment, copy the Worker URL into **Qopy > Settings > Sync** together with the same setup token and a new sync password.
+1. In **Qopy > Settings > Sync > New Deployment**, select **Copy Token and Open Cloudflare**.
+2. Sign in to Cloudflare and paste the copied value into `SETUP_TOKEN` when prompted.
+3. After deployment, copy the Worker URL back into Qopy and choose a new sync password.
 
 Cloudflare automatically provisions and binds D1 and R2 from `wrangler.jsonc`. The setup token is accepted only while the Worker is uninitialized.
 
@@ -30,7 +30,7 @@ Cloudflare automatically provisions and binds D1 and R2 from `wrangler.jsonc`. T
 
 1. Create a D1 database named `qopy-sync` and an R2 bucket named `qopy-sync-assets`.
 2. Replace `REPLACE_WITH_D1_DATABASE_ID` in `wrangler.jsonc` with the D1 database ID.
-3. Create a long random Worker secret named `SETUP_TOKEN`:
+3. In **Qopy > Settings > Sync > New Deployment**, copy the generated setup token, then create a Worker secret named `SETUP_TOKEN` with that value:
 
    ```sh
    npx wrangler secret put SETUP_TOKEN
@@ -43,7 +43,7 @@ Cloudflare automatically provisions and binds D1 and R2 from `wrangler.jsonc`. T
    npm run deploy
    ```
 
-5. Enter the resulting `workers.dev` URL and the same one-time setup token in Qopy. Qopy uses the token only for initial registration.
+5. Enter the resulting `workers.dev` URL in Qopy and choose a sync password. Qopy retains the one-time setup token locally until initial registration succeeds.
 
 ## Passwords and recovery
 
