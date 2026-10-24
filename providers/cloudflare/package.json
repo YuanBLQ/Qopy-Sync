@@ -1,0 +1,27 @@
+{
+  "name": "qopy-cloudflare-sync",
+  "description": "A private, end-to-end encrypted Cloudflare sync service for Qopy.",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "DB": {
+        "description": "Create or select the private D1 database used by Qopy Sync."
+      },
+      "ASSETS": {
+        "description": "Create or select the private R2 bucket used for encrypted clipboard images."
+      },
+      "SETUP_TOKEN": {
+        "description": "A long random one-time token. Enter the same value in Qopy during first-time setup."
+      }
+    }
+  }
+}
